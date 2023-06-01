@@ -8,11 +8,11 @@
   RUN envsubst '$NODE_ROOT' < /tmp/app.nginx > /etc/nginx/conf.d/default.conf
   
   # Variable de entorno para el host del web app
-  ENV API_GATEWAY_HOST sae_wa:3030
-  WORKDIR $API_GATEWAY_HOST
+  ENV API_WEB_HOST sae_wa:3030
+  WORKDIR $ENV API_WEB_HOST
   RUN mkdir log
   COPY app.conf /tmp/app.nginx
-  RUN envsubst '$API_GATEWAY_HOST' < /tmp/app.nginx > /etc/nginx/conf.d/default.conf
+  RUN envsubst '$ENV API_WEB_HOST' < /tmp/app.nginx > /etc/nginx/conf.d/default.conf
 
   EXPOSE 80
 

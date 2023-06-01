@@ -1,0 +1,19 @@
+version: '3'
+services:
+  proxy-movile:
+    build: ./1d_ag_rp
+    image: sae-proxy-movile
+    container_name: 1d_ag_rp
+    restart: always
+    tty: true
+    stdin_open: true
+    ports:
+      - "127.0.0.1:5000:80"
+    networks:
+      nodes-networks:
+        aliases:
+          - sae_proxy_movile
+
+networks:
+  nodes-networks:
+    external: true

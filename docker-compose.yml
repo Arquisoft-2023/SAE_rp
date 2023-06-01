@@ -2,8 +2,8 @@ version: '3'
 services:
   proxy-movile:
     build: ./1d_ag_rp
-    image: sae-proxy-movile
-    container_name: 1d_ag_rp
+    image: sae_proxy_movile
+    container_name: sae_ag_rp
     restart: always
     tty: true
     stdin_open: true
@@ -13,6 +13,20 @@ services:
       nodes-networks:
         aliases:
           - sae_proxy_movile
+          
+    proxy-web:
+    build: ./1d_wa_rp
+    image: sae-proxy-movile
+    container_name: sae_wa_rp
+    restart: always
+    tty: true
+    stdin_open: true
+    ports:
+      - "127.0.0.1:5001:80"
+    networks:
+      nodes-networks:
+        aliases:
+          - sae_proxy_web
 
 networks:
   nodes-networks:

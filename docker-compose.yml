@@ -8,7 +8,7 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "127.0.0.1:5000:80"
+      - "5000:80"
     networks:
       nodes-networks:
         aliases:
@@ -22,7 +22,7 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "127.0.0.1:5001:80"
+      - "5001:80"
     networks:
       nodes-networks:
         aliases:
@@ -36,7 +36,7 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "127.0.0.1:5002:80"
+      - "5002:80"
     networks:
       nodes-networks:
         aliases:

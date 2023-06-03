@@ -14,7 +14,7 @@ services:
         aliases:
           - sae_reverse_proxy_movile
           
-    proxy-web:
+  proxy-web:
     build: ./1d_wa_rp
     image: sae_proxy_web
     container_name: sae_wa_rp
@@ -28,7 +28,7 @@ services:
         aliases:
           - sae_reverse_proxy_web
           
-    proxy-interfaz:
+  proxy-interfaz:
     build: ./1d_int_rp
     image: sae_proxy_interfaz
     container_name: sae_int_rp

@@ -8,8 +8,7 @@
   RUN envsubst '$NODE_ROOT' < /tmp/app.nginx > /etc/nginx/conf.d/default.conf
 
 # Variable de entorno para el host del api gateway
-#  ENV API_GATEWAY_HOST sae_ag:80
-  ENV API_GATEWAY_HOST sae_wa:3030
+  ENV API_GATEWAY_HOST sae_ag:80
   WORKDIR $API_GATEWAY_HOST
   RUN mkdir log
   COPY app.conf /tmp/app.nginx

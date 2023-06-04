@@ -22,7 +22,7 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "5001:433"
+      - "5001:443"
     networks:
       nodes-networks:
         aliases:

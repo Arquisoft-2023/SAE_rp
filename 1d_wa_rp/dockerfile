@@ -15,6 +15,6 @@
   COPY key.pem /etc/ssl/private/key.pem
   COPY server.crt /etc/ssl/certs/server.crt
 
-  EXPOSE 433
+  EXPOSE 443
 
   CMD [ "nginx", "-g", "daemon off;" ]

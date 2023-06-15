@@ -9,7 +9,7 @@
   
   # Variable de entorno para el host del web app
 #   ENV API_WEB_HOST sae_wa:4173
-  ENV API_WEB_HOST sae-wa-service
+  ENV API_WEB_HOST labs-sae-wa
   RUN envsubst '$API_WEB_HOST' < /tmp/app.nginx > /etc/nginx/conf.d/default.conf
 
   #

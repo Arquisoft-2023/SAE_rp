@@ -10,7 +10,7 @@
   # Variable de entorno para el host de la interfaz
   # ENV API_INTERFACE_HOST sae_int:3037
   # ENV API_INTERFACE_HOST sae-int-service.p5.svc.dns-private:3037
-  ENV API_INTERFACE_HOST :3037
+  ENV API_INTERFACE_HOST 34.22.246.137:3037
   WORKDIR $API_INTERFACE_HOST
   RUN mkdir log
   COPY app.conf /tmp/app.nginx

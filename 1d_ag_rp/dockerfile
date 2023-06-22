@@ -9,7 +9,8 @@
 
 # Variable de entorno para el host del api gateway
   # ENV API_GATEWAY_HOST sae_ag:80
-  ENV API_GATEWAY_HOST 10.76.1.123:3121
+  # ENV API_GATEWAY_HOST 10.76.1.123:3121
+  ENV API_GATEWAY_HOST 34.77.207.162:3121
   WORKDIR $API_GATEWAY_HOST
   RUN mkdir log
   COPY app.conf /tmp/app.nginx
